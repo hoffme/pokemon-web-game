@@ -1,4 +1,3 @@
-import {useNavigate} from "react-router-dom";
 import {createContext, ReactNode, useCallback, useEffect, useState} from "react";
 
 import AuthService, {SignInParams, SignUpParams, TokensResult} from "../services/auth";
@@ -23,7 +22,6 @@ interface Props {
 }
 
 const AuthProvider = (props: Props) => {
-    const navigate = useNavigate();
     const [logged, setLogged] = useState(false);
 
     const access = useCallback((tokens?: TokensResult) => {
@@ -31,11 +29,6 @@ const AuthProvider = (props: Props) => {
         Storage.SetRefreshToken(tokens?.accessToken);
         setLogged(!!tokens);
     }, [])
-
-    useEffect(() => {
-        if (!logged) navigate('/');
-        return () => {}
-    }, [navigate, logged])
 
     useEffect(() => {
         const refreshToken = Storage.GetRefreshToken();

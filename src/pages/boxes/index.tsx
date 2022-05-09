@@ -1,7 +1,7 @@
-import useGetBoxes from "../../../hooks/getBoxes";
+import useGetBoxes from "../../hooks/getBoxes";
 
-import BoxCard from "../../../components/customs/box";
-import Loading from "../../../components/commons/loading";
+import BoxCard from "../../components/customs/box";
+import Loading from "../../components/commons/loading";
 
 import style from './style.module.scss';
 

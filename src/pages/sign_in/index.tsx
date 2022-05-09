@@ -1,12 +1,12 @@
 import {FormEvent, useState} from "react";
 
-import useAuthContext from "../../../hooks/auth";
+import useAuthContext from "../../hooks/auth";
 
-import FieldHeader from "../../../components/commons/fields/header";
-import {InputPassword, InputText} from "../../../components/commons/fields/input";
-import {PrimaryButton} from "../../../components/commons/buttons/main";
-import Surface from "../../../components/commons/surface";
-import Loading from "../../../components/commons/loading";
+import FieldHeader from "../../components/commons/fields/header";
+import {InputPassword, InputText} from "../../components/commons/fields/input";
+import {PrimaryButton} from "../../components/commons/buttons/main";
+import Surface from "../../components/commons/surface";
+import Loading from "../../components/commons/loading";
 
 import style from './style.module.scss';
 
