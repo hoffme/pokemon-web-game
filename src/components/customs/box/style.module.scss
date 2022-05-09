@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .title, .cost {
+    color: var(--background-text-secondary-color);
+    text-align: center;
+  }
+
+  .img {
+    margin: auto;
+    width: 100%;
+    max-width: 200px;
+    max-height: 200px;
+    object-fit: contain;
+  }
+
+  .button {
+    margin: auto;
+    width: 100px;
+  }
+
+  .box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000aa;
+    backdrop-filter: blur(2px);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    box-sizing: border-box;
+
+    .cards {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      flex: 1;
+      overflow-y: auto;
+      max-width: 1200px;
+      margin: auto;
+
+      .card {
+        min-width: 200px;
+        width: 15%;
+        margin: 0.5rem;
+        object-fit: contain;
+      }
+    }
+  }
+}

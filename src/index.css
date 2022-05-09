@@ -1,11 +1,44 @@
+html {
+  --primary-color: #d900c0;
+  --secondary-color: #8a007b;
+
+  --bw-0: #19001e;
+  --bw-1: #390044;
+  --bw-2: #570069;
+  --bw-3: #76008d;
+  --bw-4: #b055be;
+  --bw-5: #d07be5;
+  --bw-6: #ffffff;
+
+  --background-text-primary-color: var(--secondary-color);
+  --background-text-secondary-color: var(--bw-6);
+  --background-text-tertiary-color: var(--bw-5);
+  --background-color: var(--bw-0);
+
+  --surface-highlight-text-primary-color: var(--bw-6);
+  --surface-highlight-text-secondary-color: var(--bw-1);
+  --surface-highlight-text-tertiary-color: var(--bw-5);
+  --surface-highlight-background-color: var(--secondary-color);
+  --surface-highlight-shadow-color: var(--bw-3);
+  --surface-highlight-border-color: var(--bw-0);
+
+  --surface-text-primary-color: var(--bw-0);
+  --surface-text-secondary-color: var(--bw-6);
+  --surface-text-tertiary-color: var(--bw-5);
+  --surface-background-color: var(--bw-1);
+  --surface-shadow-color: var(--bw-3);
+  --surface-border-color: var(--bw-0);
+}
+
 html, body, #root {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-color);
 }

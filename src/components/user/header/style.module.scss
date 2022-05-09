@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+
+  .points {
+    flex: 1;
+    text-align: center;
+    font-size: 0.8em;
+    color: var(--surface-text-secondary-color);
+  }
+}

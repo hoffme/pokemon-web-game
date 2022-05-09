@@ -1,0 +1,15 @@
+.container {
+  min-width: 250px;
+  padding: 0.5rem;
+  background-color: var(--surface-highlight-background-color);
+  box-shadow: 0 0 0.5rem var(--surface-highlight-shadow-color);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+
+  .button {
+    padding: 0.25rem;
+    font-size: 0.8em;
+    font-weight: bold;
+  }
+}
