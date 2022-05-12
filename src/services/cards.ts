@@ -34,12 +34,6 @@ const allBoxes: BoxType[] = [
     { id: '3', type: 'Legendaria', cost: 200 },
 ];
 
-const allCards: Card[] = [
-    { id: '1', type: 'pokemon', img: 'https://images.pokemontcg.io/base1/1_hires.png' },
-    { id: '1', type: 'energy', img: 'https://images.pokemontcg.io/base1/2_hires.png' },
-    { id: '1', type: 'trainer', img: 'https://images.pokemontcg.io/base1/3_hires.png' },
-];
-
 class CardsService {
 
     private static readonly userCards: Card[] = [];
@@ -52,11 +46,26 @@ class CardsService {
         return allBoxes;
     }
 
+    private static async GetCards(): Promise<Card[]> {
+        const response = await fetch('https://api.pokemontcg.io/v2/cards');
+        const data = await response.json();
+
+        return data.data.map((cardData: any) => {
+            return {
+                id: cardData.id,
+                type: 'pokemon',
+                img: cardData.images.large
+            }
+        })
+    }
+
     public static async OpenBox(boxTypeId: string): Promise<Box> {
         const type = allBoxes.find(box => box.id === boxTypeId);
         if (!type) throw new Error('invalid box type');
 
         const cards: Card[] = [];
+
+        const allCards = await this.GetCards();
 
         for (let i = 0; i < 10; i++) {
             const card = allCards[Math.trunc((allCards.length - 1) * Math.random())];

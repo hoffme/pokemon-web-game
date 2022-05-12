@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding: 0.25rem;
+
+  .deck {
+    color: var(--surface-text-secondary-color);
+    background-color: var(--surface-background-color);
+    border: 1px solid var(--surface-border-color);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    margin: 0.25rem;
+
+    &.selected {
+      color: var(--surface-highlight-text-primary-color);
+      background-color: var(--surface-highlight-background-color);
+    }
+  }
+}

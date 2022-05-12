@@ -1,3 +1,5 @@
+import {ReactNode} from "react";
+
 import useJoinClassNames from "../../../../hooks/className";
 
 import style from './style.module.scss';
@@ -5,6 +7,7 @@ import style from './style.module.scss';
 interface Props {
     title?: string
     className?: string
+    children?: ReactNode
 }
 
 const FieldHeader = (props: Props) => {
@@ -12,6 +15,7 @@ const FieldHeader = (props: Props) => {
 
     return <div className={containerClassName}>
         { props.title && <label className={style.title} children={props.title} /> }
+        { props.children && <div className={style.content} children={props.children} /> }
     </div>
 }
 
